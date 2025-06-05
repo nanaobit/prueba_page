@@ -13,7 +13,13 @@
             <input />
             <button class="btn primary" onclick="alert('a poco si mi warzone')">ingresar datos</button>
         </form>
-        <script src="script.js"></script>
+        <p id="mensaje">hola mundo</p>
+        <button onclick="cambiarTxt()">tocar</button>
+        <script>
+            function cambiarTxt(){
+                document.getElementById("mensaje").innerHTML = "texto cambiado";
+            }
+        </script>
         <h1>hola mundo!!</h1>
         <p>hola negro, ojala pases todas tus materias hdp</p>
         <p1>
