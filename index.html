@@ -11,7 +11,20 @@
             <input />
             <label>peso(kg):</label>
             <input />
-            <button id="mivideo" onclick="reproducirVid()">ingresar datos</button>
+            <video id="mivideo" width="320" height="240" constrols>
+                <source src ="warzone.mp4" type="video/mp4">
+            </video>
+            <button onclick="reproducirVid()">ingresar datos</button>
+            <script>
+                function reproducirVid(){
+                    const video = document.getElementById("mivideo");
+                    if(video.paused){
+                        video.play();
+                    }else{
+                        video.pause();
+                    }
+                }
+            </script>
         </form>
         <p id="mensaje">hola mundo</p>
         <button onclick="cambiarTxt()">tocar</button>
@@ -19,20 +32,9 @@
             function cambiarTxt(){
                 document.getElementById("mensaje").innerHTML = "texto cambiado";
             }
-             function reproducirVid(){
-                const video = document.getElementById("mivideo");
-                if(video.paused){
-                    video.play();
-                }else{
-                    video.pause();
-                }
-            }
         </script>
         <h1>hola mundo!!</h1>
         <p>hola negro, ojala pases todas tus materias hdp</p>
-         <video id="mivideo" width="320" height="240" constrols>
-            <source src ="warzone.mp4" type="video/mp4">
-        </video>
         <h2>si lees esto ojala</h2>
         <h3>ojala que pases program 2 bro</h3>
         <h4>pero si no lo leiste pues no pasaras pe</h4>
