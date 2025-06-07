@@ -25,7 +25,11 @@
             }
             function reproducirVid(){
                 const video = document.getElementById("mivideo");
-                video.play();
+                if (video.paused){
+                    video.pause();
+                }else{
+                    video.play();
+                }
             }
         </script>
         <p>hola negro, ojala pases todas tus materias hdp</p>
