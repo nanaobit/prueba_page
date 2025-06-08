@@ -6,28 +6,38 @@
         <img src = "lambo.jpg" width="400">
     </head>
     <body>
+        <h1>hola mundo!!</h1>
+        <video id="mivideo" width="320" height="240" controls>
+            <source src ="warzone.mp4" type="video/mp4">
+        </video>
         <form>
             <label>nombre:</label>
             <input />
             <label>peso(kg):</label>
             <input />
-            <button class="btn primary" onclick="alert('a poco si mi warzone')">ingresar datos</button>
+            <button onclick="reproducirVid()">ingresar datos</button>
         </form>
-        <script src="script.js"></script>
-        <h1>hola mundo!!</h1>
+        <p id="mensaje">hola mundo</p>
+        <button onclick="reproducirVid()">tocar</button>
+        <script>
+            function cambiarTxt(){
+                document.getElementById("mensaje").innerHTML = "te deseo lo mejor, cuidate :)";
+            }
+            function reproducirVid(){
+                const video = document.getElementById("mivideo");
+                if (video.paused){
+                    video.play();
+                }else{
+                    video.pause();
+                }
+            }
+        </script>
         <p>hola negro, ojala pases todas tus materias hdp</p>
-        <p1>
-            los tres cerditos
-        </p1>
-        <button class="btn primary">Primary</button>
         <h2>si lees esto ojala</h2>
         <h3>ojala que pases program 2 bro</h3>
         <h4>pero si no lo leiste pues no pasaras pe</h4>
         <p>la historia de los tres cerditos cuenta la travesia</p>
         <p>de tres hermanos cerditos que para protegerse de un lobo</p>
         <p>feroz construyen su propia casa</p>
-        <video width="320" height="240" controls>
-            <source src ="warzone.mp4" type="video/mp4">
-        </video>
     </body>
 </html>
