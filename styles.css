@@ -3,8 +3,9 @@ body{
     font-family:sans-serif;
 }
 .menu{
-    color:rgb(116, 110, 110);
-    text-align:end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 p{
     color:rgb(100, 100, 211);
