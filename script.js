@@ -1,4 +1,8 @@
-function esMyr(edad){
-  return edad>19;
+function reproducirVid(){
+  const video = document.getElementById("mivideo");
+  if (video.paused){
+    video.play();
+  }else{
+    video.pause();
+  }
 }
-console.log(esMyr(26));
