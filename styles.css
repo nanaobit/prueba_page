@@ -2,7 +2,7 @@ body{
     background-color:rgb(123, 145, 123);
     font-family:sans-serif;
 }
-h1{
+.menu{
     color:rgb(116, 110, 110);
     text-align:center;
 }
@@ -13,7 +13,4 @@ p{
 p1{
     color:rgb(39, 34, 34);
     font-size:26px;
-}
-label{
-    text-align:center;
 }
