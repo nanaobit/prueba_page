@@ -19,7 +19,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 30px orange;
+  box-shadow: 0 0 30px orange, 0 0 60px yellow;
 }
 .orbit {
   position: absolute;
@@ -39,39 +39,53 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-.orbit.mercurio {
-  width: 200px;
-  height: 200px;
-  animation: spin 5s linear infinite;
+
+/* Planetas */
+.orbit.mercurio { width: 140px; height: 140px; animation: spin 4s linear infinite; }
+.orbit.mercurio .planet { width: 8px; height: 8px; background: gray; right: 0; }
+
+.orbit.venus { width: 200px; height: 200px; animation: spin 7s linear infinite; }
+.orbit.venus .planet { width: 12px; height: 12px; background: goldenrod; right: 0; }
+
+.orbit.tierra { width: 260px; height: 260px; animation: spin 10s linear infinite; }
+.orbit.tierra .planet { width: 14px; height: 14px; background: blue; right: 0; }
+
+.orbit.marte { width: 320px; height: 320px; animation: spin 15s linear infinite; }
+.orbit.marte .planet { width: 10px; height: 10px; background: red; right: 0; }
+
+.orbit.jupiter { width: 400px; height: 400px; animation: spin 25s linear infinite; }
+.orbit.jupiter .planet { width: 30px; height: 30px; background: peru; right: 0; }
+
+.orbit.saturno { width: 480px; height: 480px; animation: spin 30s linear infinite; }
+.orbit.saturno .planet { width: 26px; height: 26px; background: khaki; right: 0; }
+.orbit.saturno .planet::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  width: 50px; height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
 }
-.orbit.mercurio .planet {
-  width: 10px;
-  height: 10px;
-  background: gray;
-  right: 0;
-}
-.orbit.tierra {
-  width: 300px;
-  height: 300px;
-  animation: spin 10s linear infinite;
-}
-.orbit.tierra .planet {
-  width: 14px;
-  height: 14px;
-  background: blue;
-  right: 0;
-}
+
+.orbit.urano { width: 560px; height: 560px; animation: spin 40s linear infinite; }
+.orbit.urano .planet { width: 20px; height: 20px; background: lightblue; right: 0; }
+
+.orbit.neptuno { width: 640px; height: 640px; animation: spin 50s linear infinite; }
+.orbit.neptuno .planet { width: 18px; height: 18px; background: dodgerblue; right: 0; }
 </style>
 </head>
 <body>
 <div class="sun"></div>
 
-<div class="orbit mercurio">
-  <div class="planet"></div>
-</div>
+<div class="orbit mercurio"><div class="planet"></div></div>
+<div class="orbit venus"><div class="planet"></div></div>
+<div class="orbit tierra"><div class="planet"></div></div>
+<div class="orbit marte"><div class="planet"></div></div>
+<div class="orbit jupiter"><div class="planet"></div></div>
+<div class="orbit saturno"><div class="planet"></div></div>
+<div class="orbit urano"><div class="planet"></div></div>
+<div class="orbit neptuno"><div class="planet"></div></div>
 
-<div class="orbit tierra">
-  <div class="planet"></div>
-</div>
 </body>
 </html>
